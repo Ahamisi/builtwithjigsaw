@@ -1,14 +1,19 @@
 @extends('_layouts.master')
 
-@section('body')
-<div class="mb-8 text-center text-grey-darkest">
-    <img src="/assets/images/header-background.png" alt="Puzzle pieces flying around" class="max-w-full lg:max-w-xl opacity-10">
+@section('hero')
+<div class="jigsaw-hero">
+    <h1 class="font-thin text-center mb-4">
+        The ultimate showcase <br>
+        of web sites built with Jigsaw.
+    </h1>
 
-    <h2 class="font-thin mb-4">The ultimate showcase of web sites built with <a href="http://jigsaw.tighten.co/" class="text-grey-darkest underline hover:text-purple">Jigsaw</a></h2>
-
-    <p>Browse <a href="#websites">website inspiration</a>, find <a href="#articles">articles</a>, or <a href="/get-featured">get featured</a>.</p>
+    <p class="font-thin">
+        Browse <a href="#websites">website inspiration</a>, find <a href="#articles">articles</a>, or <a href="/get-featured">get featured</a>.
+    </p>
 </div>
+@endsection
 
+@section('body')
 <div id="websites" v-cloak>
     <div class="text-center mt-8 pt-8 text-sm">
         <a @click="filterType('all')" :class="{'cursor-pointer inline-block pb-2 px-2 md:px-4 lg:px-8 lg:mx-4 text-grey-darkest': true, 'text-purple underline': type == 'all'}">All Categories</a>

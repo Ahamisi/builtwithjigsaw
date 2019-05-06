@@ -30,6 +30,8 @@
     <body class="bg-grey-lightest text-grey-darker">
         @include ('_partials.header')
 
+        @yield('hero')
+
         <div class="container mx-auto">
             @yield('body')
 
