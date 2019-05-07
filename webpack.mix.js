@@ -13,6 +13,7 @@ mix.webpackConfig({
 
 mix.options({
     postCss: [
+        require('postcss-nested'),
         require('tailwindcss')('./tailwind.js')
     ]
 });
